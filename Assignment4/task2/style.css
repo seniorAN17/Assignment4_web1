@@ -1,0 +1,41 @@
+/* Bootstrap hides .invalid-feedback by default.
+   :user-invalid and :user-valid work only after the user has changed a field,
+   so nothing is red when the page opens. */
+
+/* invalid field: red border */
+.form-control:user-invalid,
+.form-select:user-invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
+}
+
+/* valid field: green border */
+.form-control:user-valid,
+.form-select:user-valid {
+  border-color: #198754;
+}
+
+/* show the error text (it stands right after the field) */
+.form-control:user-invalid ~ .invalid-feedback,
+.form-select:user-invalid ~ .invalid-feedback,
+.form-check-input:user-invalid ~ .invalid-feedback {
+  display: block;
+}
+
+/* checkbox: red border and red text */
+.form-check-input:user-invalid {
+  border-color: #dc3545;
+}
+
+.form-check-input:user-invalid ~ .form-check-label {
+  color: #dc3545;
+}
+
+/* radio group: the message is not next to a single radio, so use :has() */
+.radio-group:has(.form-check-input:user-invalid) .invalid-feedback {
+  display: block;
+}
+
+.radio-group:has(.form-check-input:user-invalid) .form-check-input {
+  border-color: #dc3545;
+}

@@ -1,0 +1,200 @@
+/* Colors: green #0F6B5F, amber #F2A93B, dark #16302B, light #F4F7F5, lines #E6EFEC */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #16302B;
+  background-color: #E6EFEC;
+  font-size: 14px;
+}
+
+/* card */
+.ticket-card {
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(22, 48, 43, 0.18);
+  overflow: hidden;
+}
+
+.ticket-header {
+  background-color: #0F6B5F;
+  color: #ffffff;
+  border: 0;
+  padding: 18px 24px;
+  font-weight: 700;
+}
+
+.ticket-header h1 {
+  font-weight: 700;
+  margin: 0;
+}
+
+.ticket-body {
+  padding: 28px 24px 32px;
+}
+
+/* labels */
+.form-label {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+legend.form-label {
+  float: none;
+  width: auto;
+}
+
+/* inputs */
+.form-control,
+.form-select {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #16302B;
+  background-color: #F4F7F5;
+  border: 1px solid #E6EFEC;
+  border-radius: 10px;
+}
+
+.form-control::placeholder {
+  color: #6f837e;
+  opacity: 1;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #ffffff;
+  border-color: #0F6B5F;
+  box-shadow: 0 0 0 3px rgba(15, 107, 95, 0.2);
+}
+
+/* "+7" before the phone number */
+.input-group-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #0F6B5F;
+  border: 1px solid #0F6B5F;
+  border-radius: 10px 0 0 10px;
+}
+
+.input-group > .form-control {
+  border-radius: 0 10px 10px 0;
+}
+
+/* floating label (From / To) */
+.form-floating > .form-control {
+  height: 54px;
+  min-height: 0;
+  padding-top: 26px;
+  padding-bottom: 6px;
+}
+
+.form-floating > .form-control::placeholder {
+  color: #16302B;
+  opacity: 1;
+}
+
+.form-floating > label {
+  font-size: 14px;
+  padding: 9px 14px;
+  color: #6f837e;
+  transform: scale(0.75) translateY(-2px) translateX(2px);
+}
+
+.form-floating > label::after {
+  display: none;
+}
+
+/* radio, checkbox, switch */
+.form-check-input {
+  border-color: #9db3ad;
+}
+
+.form-check-input:checked {
+  background-color: #0F6B5F;
+  border-color: #0F6B5F;
+}
+
+.form-check-input:focus {
+  border-color: #0F6B5F;
+  box-shadow: 0 0 0 3px rgba(15, 107, 95, 0.25);
+}
+
+.form-check-label {
+  font-size: 13px;
+}
+
+/* One way / Round trip */
+.trip-toggle .btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 20px;
+  color: #0F6B5F;
+  background-color: #ffffff;
+  border: 1px solid #0F6B5F;
+}
+
+.trip-toggle .btn:first-of-type {
+  border-radius: 999px 0 0 999px;
+}
+
+.trip-toggle .btn:last-of-type {
+  border-radius: 0 999px 999px 0;
+}
+
+.trip-toggle .btn-check:checked + .btn {
+  background-color: #0F6B5F;
+  color: #ffffff;
+}
+
+.trip-toggle .btn-check:focus-visible + .btn {
+  box-shadow: 0 0 0 3px rgba(242, 169, 59, 0.6);
+}
+
+/* buttons */
+.btn-find,
+.btn-clear {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 999px;
+  padding: 10px 26px;
+}
+
+.btn-find {
+  background-color: #F2A93B;
+  border: 1px solid #F2A93B;
+  color: #16302B;
+}
+
+.btn-find:hover,
+.btn-find:focus-visible {
+  background-color: #e29a28;
+  border-color: #e29a28;
+  color: #16302B;
+}
+
+.btn-clear {
+  background-color: #ffffff;
+  border: 1px solid #16302B;
+  color: #16302B;
+}
+
+.btn-clear:hover,
+.btn-clear:focus-visible {
+  background-color: #16302B;
+  color: #ffffff;
+}
+
+/* phone */
+@media (max-width: 575px) {
+  .ticket-body {
+    padding: 20px 16px 24px;
+  }
+
+  .ticket-header {
+    padding: 14px 16px;
+  }
+}
