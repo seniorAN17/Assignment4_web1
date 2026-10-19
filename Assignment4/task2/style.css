@@ -15,6 +15,8 @@
   border-color: #198754;
 }
 
+/* ~ is for the error text (changes property of the element despite its position) */
+
 /* show the error text (it stands right after the field) */
 .form-control:user-invalid ~ .invalid-feedback,
 .form-select:user-invalid ~ .invalid-feedback,

@@ -1,4 +1,22 @@
 /* Colors: green #0F6B5F, amber #F2A93B, dark #16302B, light #F4F7F5, lines #E6EFEC */
+/*
+• :hover — срабатывает, когда пользователь наводит курсор мыши на элемент.
+• :focus — срабатывает, когда элемент получает фокус
+(например, когда пользователь кликает на текстовое поле для ввода или переходит по элементам с помощью клавиатуры).
+• :focus-visible — умная версия :focus. Включается только при навигации с клавиатуры (через Tab), но не отображается при клике мышкой, чтобы не портить внешний вид кнопок.
+• :checked — выбирает отмеченные элементы формы (активные чекбоксы, выбранные радиокнопки или выбранные пункты в выпадающем списке).
+• :first-of-type — находит самый первый элемент конкретного типа (тега) среди соседей внутри одного родителя.
+• :last-of-type — находит самый последний элемент конкретного типа (тега) среди соседей внутри одного родителя.
+*/
+
+/*• ::before — виртуально вставляет контент перед содержимым элемента.
+• ::after — виртуально вставляет контент после содержимого элемента.
+• ::first-letter — стилизует только первую букву в тексте (например, для создания буквицы).
+• ::first-line — стилизует только первую строку текста.
+• ::placeholder — изменяет внешний вид подсказки (атрибута placeholder) внутри полей ввода <input>.
+• ::selection — управляет стилем (цветом текста и фона) выделенного пользователем фрагмента текста.
+*/
+
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -78,11 +96,13 @@ legend.form-label {
   border-radius: 10px 0 0 10px;
 }
 
+/* > is for the input field */
 .input-group > .form-control {
   border-radius: 0 10px 10px 0;
 }
 
 /* floating label (From / To) */
+/* > is for the input field */
 .form-floating > .form-control {
   height: 54px;
   min-height: 0;
@@ -90,11 +110,13 @@ legend.form-label {
   padding-bottom: 6px;
 }
 
+/* > is for the input field */
 .form-floating > .form-control::placeholder {
   color: #16302B;
   opacity: 1;
 }
 
+/* > is for the label */
 .form-floating > label {
   font-size: 14px;
   padding: 9px 14px;
@@ -102,6 +124,7 @@ legend.form-label {
   transform: scale(0.75) translateY(-2px) translateX(2px);
 }
 
+/* > is for the input field */
 .form-floating > label::after {
   display: none;
 }
@@ -111,6 +134,7 @@ legend.form-label {
   border-color: #9db3ad;
 }
 
+/* :checked is for the checked  */
 .form-check-input:checked {
   background-color: #0F6B5F;
   border-color: #0F6B5F;
@@ -144,11 +168,13 @@ legend.form-label {
   border-radius: 0 999px 999px 0;
 }
 
+/* + is for first button */
 .trip-toggle .btn-check:checked + .btn {
   background-color: #0F6B5F;
   color: #ffffff;
 }
 
+/* + is for first button */
 .trip-toggle .btn-check:focus-visible + .btn {
   box-shadow: 0 0 0 3px rgba(242, 169, 59, 0.6);
 }
